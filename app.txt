@@ -1,1 +1,1 @@
-Hello from my CI/CD project-version 2!
+Hello from my CI/CD project-version 3!
