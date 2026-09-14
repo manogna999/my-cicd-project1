@@ -11,13 +11,11 @@ pipeline {
         }
 
        stage('Test') {
-    steps {
-        bat 'if exist app.txt (echo TEST PASSED) else (echo TEST FAILED & exit /b 1)'
-    }
-}
+            steps {
+                bat 'if exist app.txt (echo TEST PASSED) else (echo TEST FAILED & exit /b 1)'
             }
-        }
-
+        } 
+        
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
