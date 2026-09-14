@@ -3,33 +3,11 @@ pipeline {
 
     stages {
 
-        stage('Build') {
+        stage('Docker Check') {
             steps {
-                echo 'Building application...'
-                bat 'dir'
+                bat 'docker --version'
             }
         }
 
-       stage('Test') {
-            steps {
-                bat 'if exist app.txt (echo TEST PASSED) else (echo TEST FAILED & exit /b 1)'
-            }
-        } 
-        
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'CI/CD pipeline completed successfully!'
-        }
-
-        failure {
-            echo 'CI/CD pipeline failed!'
-        }
     }
 }
