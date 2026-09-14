@@ -12,7 +12,7 @@ pipeline {
 
        stage('Test') {
             steps {
-                bat 'if exist hello.txt (echo TEST PASSED) else (echo TEST FAILED & exit /b 1)'
+                bat 'if exist app.txt (echo TEST PASSED) else (echo TEST FAILED & exit /b 1)'
             }
         } 
         
